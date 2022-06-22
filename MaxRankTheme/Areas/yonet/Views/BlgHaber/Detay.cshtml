@@ -1,0 +1,40 @@
+﻿@model BlgHaber
+@{
+    ViewBag.Title = "BlgHaber Güncelle";
+    if (Model.Id == 00)
+    {
+        ViewBag.Title = "BlgHaber Ekle";
+    }
+    Layout = "~/Areas/yonet/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Blog-Haber Detay</h4>
+                <p class="card-description">
+                    @ViewBag.Title
+                </p>
+                @Html.Raw(ViewBag.Mesaj)
+                <form class="forms-sample" role="form" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="exampleInputUsername1">Başlık</label>
+                        <input required value="@Model.Baslik" name="Baslik" type="text" class="form-control" id="exampleInputUsername1" placeholder="Blog-Haber Başlığı">
+
+                        <label for="exampleInputUsername2">İçerik</label>
+                        <input required value="@Model.Icerik" name="Icerik" type="text" class="form-control" id="exampleInputUsername1" placeholder="Blog-Haber İçeriği">
+
+                        <label for="exampleInputUsername4">Görsel</label>
+                        <input required value="@Model.Gorsel" name="fGorsel" type="file" class="form-control" id="exampleInputUsername1">
+
+                    </div>
+                    <button type="submit" class="btn-xs btn-primary mr-2"><i class="mdi mdi-content-save">Kaydet</i></button>
+                    <a href="~/yonet/blghaber" class="btn-xs btn btn-light"><i class="mdi mdi-undo">Vazgeç</i></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

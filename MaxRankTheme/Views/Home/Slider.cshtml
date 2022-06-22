@@ -1,0 +1,41 @@
+﻿@{ 
+    SliderBLL _slider = new SliderBLL();
+    var liste = _slider.Get(Size:7);
+}
+<section id="slider" class="clearfix">
+    <div id="slideshow">
+        <div data-src="img/slider/slide1.jpg">
+            <div class="camera_caption right fadeFromRight">
+                <h3>EN GÜNCEL HABERLER...</h3>
+                <p>Haberler ve güncel gelişmeler, gündemden ekonomiye son dakika haberler Türkiye'nin en çok takip edilen flaş haber sitesi Haberiz'de.</p>
+            </div>
+        </div>
+        @foreach (var item in liste)
+        {
+            <div data-src="img/slider/@item.Gorsel">
+            </div>
+        }
+    </div>
+</section>
+<script type="text/javascript">
+        jQuery(function () {
+            jQuery('#slideshow').camera({
+                height: '541px',
+                thumbnails: false,
+                pagination: true,
+                hover: true,
+                playPause: false,
+                loader: 'none',
+                navigation: false
+            });
+        });
+        jQuery(document).ready(function () {
+            jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({ pause: "hover" });
+        });
+        jQuery(document).ready(function () {
+            jQuery(".image").hover(
+                function () { jQuery(this).find(".prettyFrame").stop().animate({ bottom: '0%', top: '0%' }, 300) },
+                function () { jQuery(this).find(".prettyFrame").stop().animate({ bottom: '51%', top: '51%' }, 300) }
+            );
+        });
+</script>

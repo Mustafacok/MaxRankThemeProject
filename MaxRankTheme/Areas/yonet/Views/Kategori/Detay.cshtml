@@ -1,0 +1,43 @@
+﻿@model Kategori
+@{
+    ViewBag.Title = "Kategori - Detay";
+    Layout = "~/Areas/yonet/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Kategori </h4>
+                <p class="card-description">
+                    Detay
+                </p>
+                @Html.Raw(ViewBag.Mesaj)
+                <form class="forms-sample" role="form" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="exampleInputUsername1">Adı</label>
+                        <input required value="@Model.Adi" name="Adi" type="text" class="form-control" id="exampleInputUsername1" placeholder="Kategori-Adı">
+
+                        <label for="exampleInputUsername2">Sırası</label>
+                        <input required value="@Model.Sira" name="Sira" type="text" class="form-control" id="exampleInputUsername1" placeholder="Kategori-Sırası">
+
+                        <label for="exampleInputUsername3">Durumu</label>
+                        <select required class="form-control" name="Durumu">
+                            <option @(Model.Durumu == 1 ? "selected" : "") value="1">AKTİF</option>
+                            <option @(Model.Durumu == 0 ? "selected" : "") value="0">PASİF</option>
+                        </select>
+
+                        <label for="exampleInputUsername4">Görsel</label>
+                        <input required value="@Model.Gorsel" name="fGorsel" type="file" class="form-control" id="exampleInputUsername1">
+                        <input type="hidden" name="Gorsel" value="@Model.Gorsel" />
+                    </div>
+                    <button type="submit" class="btn-xs btn btn-primary mr-2"><i class=" mdi mdi-content-save">Kaydet</i></button>
+                    <a href="~/yonet/kategori" class="btn-xs btn btn-light">
+                        <i class="mdi mdi-undo">
+                            Vazgeç
+                        </i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

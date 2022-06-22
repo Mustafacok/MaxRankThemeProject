@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>@ViewBag.Title</title>
+    <link rel="shortcut icon" href="~/areas/yonet/images/favicon2.png" />
+    <link rel="stylesheet" href="~/Areas/yonet/vendors/css/jquery-ui.css" />
+    <link rel="stylesheet" href="~/areas/yonet/css/style.css">
+    <link rel="stylesheet" href="~/areas/yonet/vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="~/areas/yonet/vendors/css/vendor.bundle.base.css">
+    @* normalde scriptler en aşağıda olur ama jquery js ler burada olması gerekiyor bu proje için.(autocomplete sebebiyle) *@
+    <script src="~/areas/yonet/vendors/js/vendor.bundle.base.js"></script>
+    <script src="~/areas/yonet/vendors/chart.js/Chart.min.js"></script>
+    <script src="~/areas/yonet/js/off-canvas.js"></script>
+    <script src="~/areas/yonet/js/hoverable-collapse.js"></script>
+    <script src="~/areas/yonet/js/template.js"></script>
+    <script src="~/areas/yonet/js/dashboard.js"></script>
+    <script src="~/Areas/yonet/vendors/js/jquery.min.js"></script>
+    <script src="~/Areas/yonet/vendors/js/bootstrap.min.js"></script>
+    <script src="~/Areas/yonet/vendors/js/jquery-ui.js"></script>
+</head>
+<body>
+    <div class="container-scroller d-flex">
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+            <ul class="nav">
+                <li class="nav-item sidebar-category">
+                    <p>Yönetim Paneli | Menüler</p>
+                    <span></span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet">
+                        <i class="mdi mdi-home menu-icon"></i>
+                        <span class="menu-title">Anasayfa</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/kategori">
+                        <i class="mdi mdi-view-quilt menu-icon"></i>
+                        <span class="menu-title">Kategori</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/sayfa">
+                        <i class="mdi mdi-book-open-page-variant menu-icon"></i>
+                        <span class="menu-title">Sayfa</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/slider">
+                        <i class="mdi mdi-animation menu-icon"></i>
+                        <span class="menu-title">Slider</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/referans">
+                        <i class="mdi mdi-receipt menu-icon"></i>
+                        <span class="menu-title">Referans</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/blghaber">
+                        <i class="mdi mdi-newspaper menu-icon"></i>
+                        <span class="menu-title">Blog-Haber</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="~/yonet/kullanicilistesi">
+                        <i class="mdi mdi-account-multiple menu-icon"></i>
+                        <span class="menu-title">Kullanıcı Listesi</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container-fluid page-body-wrapper">
+            @{ Html.RenderAction("Header", "Home");}
+            @RenderBody()
+            @{ Html.RenderAction("Footer", "Home");}
+        </div>
+    </div>
+</body>
+</html>

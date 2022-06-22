@@ -1,0 +1,34 @@
+﻿@{
+    ReferansBLL _referans = new ReferansBLL();
+    var liste = _referans.Get(Size: 10);
+}
+<div id="partners">
+    <div class="nav-bar clearfix">
+        <h4>Referanslar</h4>
+        <hr />
+    </div>
+    <div id="partnersCarousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="active item">
+                <div class="row-fluid">
+                    @foreach (var item in liste)
+                    {
+                        <div class="span3">
+                            <img title="@item.Baslik" src="~/img/referans/@item.Gorsel" alt="@item.Baslik" />
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="item">
+                <div class="row-fluid">
+                    @foreach (var item in liste)
+                    {
+                        <div class="span3">
+                            <img title="@item.Baslik" src="~/img/referans/@item.Gorsel" alt="@item.Baslik" />
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

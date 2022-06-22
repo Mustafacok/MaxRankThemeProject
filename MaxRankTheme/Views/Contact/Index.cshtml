@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "MaxRankTheme - Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section id="content">
+    <div id="content-box" class="container">
+        <div class="row">
+            <div id="main-title" class="span12">
+                <div class="line"></div>
+                <h4 class="text">İletişim</h4>
+            </div>
+            <div id="gmap" class="span12">
+                <iframe width="400" height="371" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12218.18090455903!2d32.912934699999994!3d40.04093195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4082086d2c4e0951%3A0x932da5916b8dd192!2sPursaklar%20Belediyesi!5e0!3m2!1str!2str!4v1647678466052!5m2!1str!2str"></iframe>
+            </div>
+            <div class="span8">
+                <div class="nav-bar clearfix">
+                    <h4>Bize Bildiriniz.</h4>
+                    <hr />
+                </div>
+                <form id="contactForm">
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <label class="name">
+                                <input type="text" value="Name" />
+                                <span class="error">*This is not a valid name.</span> <span class="empty">*This field is required.</span>
+                            </label>
+                        </div>
+                        <div class="span4">
+                            <label class="email">
+                                <input type="text" value="Your Email" />
+                                <span class="error">*This is not a valid email address.</span> <span class="empty">*This field is required.</span>
+                            </label>
+                        </div>
+                        <div class="span4">
+                            <input type="text" value="Website" onfocus="if(this.value=='Website'){this.value=''}" onblur="if(this.value==''){this.value='Website'}" />
+                        </div>
+                    </div>
+                    <div class="row-fluid">
+                        <div class="span12">
+                            <label class="message">
+                                <textarea>Message...</textarea>
+                                <span class="error">*The message is too short.</span> <span class="empty">*This field is required.</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="contacts" class="span4">
+                <div class="nav-bar clearfix">
+                    <h4>İletişim Bilgileri</h4>
+                    <hr />
+                </div>
+                <p>Bizimle iletişime geçmek ister misiniz...</p>
+                <br />
+                <p>Phone: <span class="accent">+905316494745</span></p>
+                <p>Email: <span class="accent">mustafacok06@gmail.com</span></p>
+                <p>Fax: <span class="accent">-</span></p>
+                <p>Website: <span class="accent">artstudioworks.net</span></p>
+                <p>Adress: <span class="accent">Turkey,  Ankara 06145,  Belediye Street 34</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+

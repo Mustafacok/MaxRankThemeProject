@@ -1,0 +1,37 @@
+﻿@model KullaniciListesi
+@{
+    ViewBag.Title = "Kullanıcı Listesi - Detay";
+    Layout = "~/Areas/yonet/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Kullanıcı Listesi </h4>
+                <p class="card-description">
+                    Detay
+                </p>
+                @Html.Raw(ViewBag.Mesaj)
+                <form class="forms-sample" role="form" method="post">
+                    <div class="form-group">
+                        <label for="exampleInputUsername1">Adı Soyadı</label>
+                        <input required value="@Model.Adisoyadi" name="Adisoyadi" type="text" class="form-control" id="exampleInputUsername1" placeholder="Kullanıcı Adı-Soyadı">
+
+                        <label for="exampleInputUsername2">Cep Telefonu</label>
+                        <input required value="@Model.CepTelefonu" name="CepTelefonu" type="text" class="form-control" id="exampleInputUsername1" placeholder="Kullanıcı-CepTelefonu">
+
+                        <label for="exampleInputUsername2">Email</label>
+                        <input required value="@Model.Email" name="Email" type="text" class="form-control" id="exampleInputUsername1" placeholder="Kullanıcı-Email">
+                    </div>
+                    <button type="submit" class="btn-xs btn btn-primary mr-2"><i class=" mdi mdi-content-save">Kaydet</i></button>
+                    <a href="~/yonet/kullanicilistesi" class="btn-xs btn btn-light">
+                        <i class="mdi mdi-undo">
+                            Vazgeç
+                        </i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

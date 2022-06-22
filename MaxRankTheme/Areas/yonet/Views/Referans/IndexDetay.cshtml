@@ -1,0 +1,61 @@
+﻿@model List<Referans>
+@{
+    string elemanblg = GenelAraclarBLL.ElemanBilgisi(ViewBag.Count);
+}
+<script>
+    $(function () {
+        $("#spnElemanBilgisi").html("@(elemanblg)");
+    });
+</script>
+<table class="table table-hover table-active">
+    <thead class="table table-active">
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                <input type="checkbox" id="cbTumu" />
+            </th>
+            <th>
+                <a href="~/yonet/Referans@(GenelAraclarBLL.SortLink("Baslik"))">
+                    <i class="mdi mdi-chevron-up"></i>
+                    Başlık
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </th>
+            <th>
+                Görsel
+            </th>
+            <th>
+                Detay
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Id
+                </td>
+                <th>
+                    <input type="checkbox" class="cbTek" name="cbTek" value="@item.Id" />
+                </th>
+                <td>
+                    @item.Baslik
+                </td>
+                <td>
+                    <a target="_blank" href="~/img/Referans/@item.Gorsel">
+                        <img src="~/img/Referans/@item.Gorsel" alt="" />
+                    </a>
+                </td>
+                <td>
+                    <a href="~/yonet/Referans/detay/@item.Id">
+                        <i class="mdi mdi-library-plus"></i>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+@Html.Raw(GenelAraclarBLL.SayfalamaYap("Referans", ViewBag.Count))

@@ -1,0 +1,65 @@
+﻿@model List<KullaniciListesi>
+@{
+    string elemanblg = GenelAraclarBLL.ElemanBilgisi(ViewBag.Count);
+}
+<script>
+    $(function () {
+        $("#spnElemanBilgisi").html("@(elemanblg)");
+    });
+</script>
+<table class="table table-hover table-active">
+    <thead class="table table-active">
+        <tr>
+            <th>
+                #
+            </th>
+            <th>
+                <input type="checkbox" id="cbTumu" />
+            </th>
+            <th>
+                <a href="~/yonet/kullanicilistesi@(GenelAraclarBLL.SortLink("Adisoyadi"))">
+                    <i class="mdi mdi-chevron-up"></i>
+                    Adı Soyadı
+                    <i class="mdi mdi-chevron-down"></i>
+                </a>
+            </th>
+            <th>
+                Cep Telefonu
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Detay
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @item.Id
+            </td>
+            <th>
+                <input type="checkbox" class="cbTek" name="cbTek" value="@item.Id" />
+            </th>
+            <td>
+                @item.Adisoyadi
+            </td>
+            <td>
+                @item.CepTelefonu
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                <a href="~/yonet/kullanicilistesi/detay/@item.Id">
+                    <i class="mdi mdi-library-plus"></i>
+                </a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+@Html.Raw(GenelAraclarBLL.SayfalamaYap("KullaniciListesi", ViewBag.Count))

@@ -1,0 +1,36 @@
+﻿<div class="modal fade" id="modalUyari0" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Uyarı</h4>
+            </div>
+            <div class="modal-body">
+                Kayıt silmek için seçim yapmalısınız.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modalUyari1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form method="post" action="~/yonet/@ViewBag.name/kayitsil">
+            <input type="hidden" id="cbSecili" name="cbSecili" value="" />
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Uyarı</h4>
+                </div>
+                <div class="modal-body">
+                    Seçili olan <span class="text-danger spEleman">0</span> kayıt(lar)ı silmek istediğinizden emin misiniz?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-dismiss="modal">Hayır</button>
+                    <button type="submit" class="btn btn-primary">Evet</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,168 @@
+﻿@model List<Kategori>
+@{
+    ViewBag.Title = "MaxRankTheme - Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{ Html.RenderAction("Slider","Home");}
+<section id="content">
+    <div id="content-box" class="container">
+        <div class="row">
+
+            @foreach (var item in Model)
+            {
+                <div class="span3 benefit">
+                    <h4 class="header responsive">@item.Adi</h4>
+                    <div class="footer">
+                        <p class="tertiary-color">Duis luctus tortor vitae turpis dictum vitae porta nulla congue. Aliquam erat volutpat. Duis dictum feugiat sapien, ut luctus sapien convallis eu.</p>
+                        <a class="read-more-btn" href="~/kategori/index/@item.Id">Read More</a>
+                    </div>
+                </div>
+            }
+            <div class="span8 latest-news">
+                <div class="nav-bar clearfix">
+                    <h4>
+                        Latest News
+                        <a id="latestNews-next" class="nav-button next pull-right" href="#latestNews" data-slide="next"></a>
+                        <a id="latestNews-prev" class="nav-button prev pull-right" href="#latestNews" data-slide="prev"></a>
+                    </h4>
+                    <hr />
+                </div>
+                <div id="latestNews" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <div class="row-fluid post-preview">
+                                <div class="span6 clearfix">
+                                    <div class="date pull-left">
+                                        <h2 class="day">15</h2>
+                                        <h4 class="month">Dec</h4>
+                                        <h5 class="year">2012</h5>
+                                        <img class="post-type" src="~/img/image-type.png" alt="Post Type" />
+                                    </div>
+                                    <div class="image pull-right">
+                                        <img src="img/blog/post-img1.jpg" alt="Post Image" />
+                                        <div class="prettyFrame">
+                                            <ul class="zoom">
+                                                <li><a href="#"><img src="~/img/chain.png" alt="Chain" /></a></li>
+                                                <li><a href="~/img/blog/post-img1.jpg" data-rel="prettyPhoto" title="Description"><img src="~/img/loop.png" alt="Zoom" /></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span6 text">
+                                    <h5 class="title"><a href="blog2.html">Suspendisse nec ante sit amet sem cursus adipiscing.</a></h5>
+                                    <p class="tertiary-color">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras rutrum, arcu eu vehicula auctor.</p>
+                                    <p class="links"><a href="blog2.html">Category 1</a>, <a href="blog2.html">Category 2</a>, <a href="blog2.html">Category 3</a> | <a href="blog2.html">23 Comments</a></p>
+                                </div>
+                            </div>
+                            <div class="row-fluid post-preview">
+                                <div class="span6 clearfix">
+                                    <div class="date pull-left">
+                                        <h2 class="day">21</h2>
+                                        <h4 class="month">Dec</h4>
+                                        <h5 class="year">2012</h5>
+                                        <img class="post-type" src="~/img/analysis-type.png" alt="Post Type" />
+                                    </div>
+                                    <div class="image pull-right">
+                                        <img src="~/img/blog/post-img2.jpg" alt="Post Image" />
+                                        <div class="prettyFrame">
+                                            <ul class="zoom">
+                                                <li><a href="#"><img src="~/img/chain.png" alt="Chain" /></a></li>
+                                                <li><a href="~/img/blog/post-img2.jpg" data-rel="prettyPhoto" title="Description"><img src="~/img/loop.png" alt="Zoom" /></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span6 text">
+                                    <h5 class="title"><a href="blog2.html">Suspendisse nec ante sit amet sem cursus adipiscing.</a></h5>
+                                    <p class="tertiary-color">Phasellus iaculis, ligula at suscipit ullamcorper, lectus nulla adipiscing lorem, ut commodo lacus sem ac felis. Sed a lectus vitae lacus imperdiet tristique. Fusce interdum ultrices gravida. Phasellus dapibus pharetra.</p>
+                                    <p class="links"><a href="blog2.html">Category 1</a>, <a href="blog2.html">Category 2</a>, <a href="blog2.html">Category 3</a> | <a href="blog2.html">54 Comments</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row-fluid post-preview">
+                                <div class="span6 clearfix">
+                                    <div class="date pull-left">
+                                        <h2 class="day">15</h2>
+                                        <h4 class="month">Dec</h4>
+                                        <h5 class="year">2012</h5>
+                                        <img class="post-type" src="~/img/image-type.png" alt="Post Type" />
+                                    </div>
+                                    <div class="image pull-right">
+                                        <img src="~/img/blog/post-img1.jpg" alt="Post Image" />
+                                        <div class="prettyFrame">
+                                            <ul class="zoom">
+                                                <li><a href="#"><img src="~/img/chain.png" alt="Chain" /></a></li>
+                                                <li><a href="~/img/blog/post-img1.jpg" data-rel="prettyPhoto" title="Description"><img src="~/img/loop.png" alt="Zoom" /></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="span6 text">
+                                    <h5 class="title"><a href="blog2.html">Suspendisse nec ante sit amet sem cursus adipiscing.</a></h5>
+                                    <p class="tertiary-color">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras rutrum, arcu eu vehicula auctor.</p>
+                                    <p class="links"><a href="blog2.html">Category 1</a>, <a href="blog2.html">Category 2</a>, <a href="blog2.html">Category 3</a> | <a href="blog2.html">23 Comments</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="span4 from-blog">
+                <div class="nav-bar clearfix">
+                    <h4>From Blog</h4>
+                    <hr />
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb1.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Lorem ipsum dolor sit amet. Aliquam elementum, metus sit amet mmodo ...</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb2.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Consectetur adipisicing elit. Aenean non blandit nibh. Vivamus ...</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb3.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Sed do eiusmod tempor incididunt. Vivamus tellus nisi, pretium eu ...</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb4.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Ut labore et dolore magna aliqua. Donec ipsum sapien, vestibulum a ...</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb5.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Ut enim ad minim veniam. Quisque bibendum ultricies lacinia ...</a></p>
+                    </div>
+                </div>
+                <div class="row-fluid post-mini">
+                    <div class="span2">
+                        <a href="blog2.html"><img src="~/img/blog/post-thumb6.png" alt="Post Thumb" /></a>
+                    </div>
+                    <div class="span10">
+                        <p class="primary-color"><a href="blog2.html">Quis nostrud exercitation ullamco laboris. Proin sollicitudin semper dictum ...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

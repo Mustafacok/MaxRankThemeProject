@@ -1,0 +1,40 @@
+﻿@model Sayfa
+@{
+    ViewBag.Title = "Detay";
+    Layout = "~/Areas/yonet/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Sayfa</h4>
+                <p class="card-decription">
+                    Detay
+                </p>
+                @Html.Raw(ViewBag.Mesaj)
+                <form class="forms-sample" role="form" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>Adı</label>
+                        <input value="@Model.Adi" name="Adi" type="text" class="form-control" placeholder="Sayfa Adı" />
+
+                        <label>İçerik</label>
+                        <input value="@Model.Icerik" name="Icerik" type="text" class="form-control" placeholder="Sayfa İçerik" />
+
+                        <label>Açıklama</label>
+                        <input value="@Model.Aciklama" name="Aciklama" type="text" class="form-control" placeholder="Sayfa Açıklama" />
+
+                        <label>Görsel</label>
+                        <input value="@Model.Gorsel" name="fGorsel" type="file" class="form-control" />
+                    </div>
+                    <button type="submit" class="btn-xs btn btn-primary mr-2"><i class=" mdi mdi-content-save">Kaydet</i></button>
+                    <a href="~/yonet/sayfa" class="btn-xs btn btn-light">
+                        <i class="mdi mdi-undo">
+                            Vazgeç
+                        </i>
+                    </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
